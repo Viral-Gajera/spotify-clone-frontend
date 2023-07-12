@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app {
+    /* DISABLE SELECTION */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Standard */
+
+    /* DISABLE BLUE HIGHLIGHT WHEN CLICK [FOR MOBILE CHROME] */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.app:focus {
+    outline: none !important;
+}
+
+/* CUSTOM SCROLL BAR */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3e3e3e;
+    border-radius: 10px;
+}
+
+/* CUSTOM SLIDER */
+.custom-range-input {
+    -webkit-appearance: none;
+    height: 4px;
+    width: 100%;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.5);
+    background-image: linear-gradient(#ffffff, #ffffff);
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+}
+
+.custom-range-input:hover {
+    background-image: linear-gradient(
+        theme("colors.primary"),
+        theme("colors.primary")
+    );
+}
+/* Input Thumb */
+.custom-range-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    transition: "background" 0.3s ease-in-out;
+}
+.custom-range-input:hover::-webkit-slider-thumb {
+    height: 15px;
+    width: 15px;
+    background: #ffffff;
+}
+/* Input Track */
+.custom-range-input::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    border-radius: 2px;
+}
