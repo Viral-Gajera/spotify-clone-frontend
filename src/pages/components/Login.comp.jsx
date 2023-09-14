@@ -40,6 +40,7 @@ function Login() {
         })
             .then((response) => response.json())
             .then((result) => {
+                console.log(result);
                 if (result.isSuccess == true) {
                     localStorage.setItem("firstname", result.data.firstname);
                     localStorage.setItem("email", result.data.email);

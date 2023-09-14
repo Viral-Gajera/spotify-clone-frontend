@@ -24,7 +24,9 @@ function YourLibrary() {
             .then((res) => res.json())
             .then((result) => {
                 console.log(result.data);
-                setSongList(result.data);
+                if (result) {
+                    setSongList(result.data);
+                }
             });
     }, []);
 
